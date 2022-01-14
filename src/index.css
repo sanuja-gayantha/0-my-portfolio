@@ -1,66 +1,101 @@
-/* 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@500;600&display=swap');
+
 :root{
-    --bg: #242526;
-    --bg-accent: #484a4d;
-    --text-color: #dadce1;
-    --nav-size: 60px;
-    --border: 1px solid #474a4d;
-    --border-radius: 8px;
-    --speed: 500ms;
+
+    /* Colors */
+    --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+
+    --first-color-light-dark: hsl(var(--hue-color), 57%, 53%);
+    --first-color-light-medium: hsl(var(--hue-color), 69%, 61%);
+    --first-color-light-lighter: hsl(var(--hue-color), 92%, 85%);
+
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 45%);
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
+
+    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --hover-color: hsl(var(--hue-color), 57%, 53%); /*hsl(var(--hue-color), 30%, 8%);*/
+
+
+    /* Font and typography */
+    --body-font: 'Poppins', sans-serif;
+    --logo-font: 'Permanent Marker', cursive;
+
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem; /*3rem;*/
+    --h2-font-size: 1.25rem; /*2rem;*/
+    --h3-font-size: 1.125rem; /*1.25rem;*/
+    --h4-font-size: .938rem; /*0.875rem;*/
+    --p-font-size: 1.125rem; /*1.25rem;*/
+    --normal-font-size: .938rem; /*0.875rem;*/
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /* Font weight */
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /* spacing */
+    --spacing: 0.1rem;
+
+    --transition: all 0.3s linear;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
 
 }
 
-*,
-::after,
-::before {
+
+/* Global Styles */
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
-    font-family:"Montserrat",sans-serif;
+    font-family:var(--body-font);
+    font-size: var(--normal-font-size);
+    line-height: var(--line-height-normal);
+    background-color: var(--body-color);
+    color: var(--text-color);
+
 }
 ul{
     list-style: none;
 }
 a{
-    color: var(--text-color);
-    text-decoration:none;
+    text-decoration: none;
 }
-.navbar{
-    height: var(--nav-size);
-    background-color: var(--bg);
-    padding: 0 1rem;
-    border-bottom: var(--border);
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  margin-bottom: 0.75rem;
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
 }
-.navbar-nav{
-    max-width: 100%;
-    height: 100%;
-    display:flex;
-    justify-content: flex-end;
-}
-.nav-item{
-    width: calc(var(--nav-size) * 2);
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    border: 1px solid #fff;
-    
-
-}
-.icon-button{
-    --button-size: calc(var(--nav-size) * 0.5);
-    width: var(--button-size);
-    height: var(--button-size);
-    background-color: var(--bg-accent);
-    border-radius: 50%;
-    padding: 5px;
-    margin: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-h5{
-    color: #dadce1;
-} */
+h1 {
+    font-size: var(--h1-font-size);
+  }
+h2 {
+    font-size: var(--h2-font-size);
+  }
+h3 {
+    font-size: var(--h3-font-size);
+  }
+h4 {
+    font-size: var(--h4-font-size);
+  }
+p {
+    margin-bottom: 1.25rem;
+    font-size: var(--p-font-size);
+  }
