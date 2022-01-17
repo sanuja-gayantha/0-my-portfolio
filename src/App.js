@@ -6,16 +6,27 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Error from './components/Error';
 import Navbar from './components/Navbar';
+import About from './components/About';
+import ProjectsBar from './components/ProjectsBar';
+import Contact from './components/Contact';
 
 function App() {
   return (
     <Router>
-      <Navbar />
       <Switch>
         <Route exact path='/'>
           <Home />
         </Route>
-        <Route exact path='/projects'>
+        {/* <Route exact path='/about'>
+          <About />
+        </Route>
+        <Route exact path='/ProjectsBar'>
+          <ProjectsBar />
+        </Route>
+        <Route exact path='/contact'>
+          <Contact />
+        </Route> */}
+        <Route exact path='/ProjectsBar/projects'>
           <Projects />
         </Route>
         <Route path='*'>

@@ -1,18 +1,25 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 // custom imports
-import {links} from '../data/NavbarData';
+import {links} from '../data/data';
 import {FaLinkedin, FaBars} from 'react-icons/fa';
 
 const Navbar = () => {
 
-    const toggleTheame = () => {
-      console.log('toggle theame')
-    }
-    const toggleLinks = () => {
-      console.log('toggleLinks')
-    }
+    const [showLinks, setShowLinks] = useState(false);
+    const linksContainerRef = useRef(null);
+    const linksRef = useRef(null);
+
+    useEffect(() => {
+      const linksHeight = linksRef.current.getBoundingClientRect().height;
+      if(showLinks) {
+        linksContainerRef.current.style.height = `${linksHeight}px`;
+      }else{
+        linksContainerRef.current.style.height = `0px`;
+      }
+    }, [showLinks]);
 
     return (
       <NavContainer>
@@ -20,21 +27,21 @@ const Navbar = () => {
         <div className='nav-center'>
           <div className='nav-header'>
             <a href="#" className="nav-logo">Sanuja</a>
-            <button className='nav-toggle' onClick={toggleLinks}>
+            <button className='nav-toggle' onClick={() => setShowLinks(!showLinks)}>
               <FaBars />
             </button>           
           </div>
 
-          <div className='links-container show-container' >
-            <ul className='links'>
+          <div className='links-container' ref={linksContainerRef}>
+            <ul className='links' ref={linksRef}>
               {links.map((link) => {
                 const { id, url, text, icon } = link;
                 return (
                   <li key={id}>
-                    <a href={url}>
-                      <div className="nav-icon">{icon}</div>
-                      <div className="nav-title">{text}</div>
-                    </a>
+                      <Link className='link' to={url} onClick={() => setShowLinks(!showLinks)}>
+                        <div className="nav-icon">{icon}</div>
+                        <div className="nav-title">{text}</div>
+                      </Link>
                   </li>
                 );
               })}
@@ -51,15 +58,22 @@ const NavContainer = styled.nav`
     background: var(--body-color);
     box-shadow: var(--light-shadow);
     border-radius: 0 0 1rem 1rem;
+    position:fixed;
+    min-height:3rem;
+    width:100vw;
+    z-index: 1;
+    // border: 1px solid;
+    
   }
 
   .nav-header{
     display:flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     text-transform: uppercase;
     // border-bottom: 1px solid
+    
   }
 
   
@@ -69,17 +83,20 @@ const NavContainer = styled.nav`
     font-size: var(--h2-font-size);
     letter-spacing: var(--spacing);
     padding: 0 1rem 0 0.5rem;
-    
+    transition: var(--transition);
     &:hover{
       color: var(--hover-color);
     }
   }
 
   .nav-toggle {
+    display: flex;
     font-size: var(--h1-font-size);
     background: transparent;
     border-color: transparent;
     transition: var(--transition);
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     &:hover{
       color: var(--hover-color);
@@ -88,7 +105,7 @@ const NavContainer = styled.nav`
   }
  
   .links-container {
-    /* height: 0; */
+    height: 0;
     overflow: hidden;
     transition: var(--transition);
   }
@@ -98,7 +115,7 @@ const NavContainer = styled.nav`
     gap: 1.5rem;
     padding: 1rem 0 1rem 0;
 
-    a {
+    .link {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -121,6 +138,7 @@ const NavContainer = styled.nav`
   @media screen and (min-width: 767px){
     nav{
       border-radius: 0 0 0 0;
+      height:5rem;
     }
     .nav-header {
       padding: 0;
@@ -131,7 +149,7 @@ const NavContainer = styled.nav`
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.5rem;
+      padding: 0.5rem 1rem;
     }
 
     .nav-toggle {
@@ -140,13 +158,17 @@ const NavContainer = styled.nav`
     .nav-logo{
       color:var(--title-color);
     }
+    .links-container {
+      height: auto !important;
+      padding: 0 0.5rem 0 0;
+    }
 
     .links{
       display:flex;
       justify-content: center;
       align-items: center;
 
-      a {
+      .link {
         font-size: var(--normal-font-size);
         text-transform: capitalize;
         letter-spacing: var(--spacing);
@@ -160,15 +182,6 @@ const NavContainer = styled.nav`
     .nav-icon{
       display: none;
     }
-  
-  // .show-container{
-  //   display: none;
-  // } 
-
-  
-
-
-
 `
 
 export default Navbar;
