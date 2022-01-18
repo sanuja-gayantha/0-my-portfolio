@@ -19,7 +19,7 @@ const About = () => {
                         </li>
                     </ul>
                 <div className="about-quoto">
-                  “Everything should be made as simple as possible, but no simpler”
+                  “Everything should be made as simple as possible, but not simpler”
                 </div>
                 </div>
             </div>
