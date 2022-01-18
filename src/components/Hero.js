@@ -43,6 +43,7 @@ const HeroContainer = styled.section`
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    border-top:3rem solid transparent;
 
   }
   .hero-info{

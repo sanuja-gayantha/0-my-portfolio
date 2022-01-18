@@ -8,17 +8,20 @@ import { social } from '../data/data';
 const Contact = () => {
 
     const [message, setMessage] = useState('');
-    const formRef = useRef();
+    const formRef = useRef(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         emailjs.sendForm('service_yxrqmok', 'template_yhhuqvc', formRef.current, 'user_1e1EwwXdIiDGQUSvUNGbg')
         .then((result) => {
-            console.log(result.text);
+            console.log(result);
+            setMessage('Success');
         }, (error) => {
-            console.log(error.text);
+            console.log(error);
+            setMessage('Faield Try again');
         });
+        
     }
 
     return(
@@ -33,7 +36,7 @@ const Contact = () => {
                             const { id, url, icon } = socialIcon;
                             return (
                             <li key={id}>
-                                <a href={url}>{icon}</a>
+                                <a target="_blank" href={url}>{icon}</a>
                             </li>
                             );
                         })}
@@ -46,6 +49,7 @@ const Contact = () => {
                             <input type="text" placeholder='Email' name="user_email" />
                             <textarea placeholder='Message' name="message" id="" rows="5"></textarea>
                             <input className="btn" type="submit" value="Send" />
+                            <div>{message}</div>
                         </form>
                     </div>
                 </div>
@@ -67,7 +71,7 @@ const ContactContainer = styled.section`
       "form-center"
       "back";
   
-    grid-template-rows: 3rem auto 2rem;   
+    grid-template-rows: 5rem auto 2rem;   
     gap:1rem;
     justify-items: center;
     align-items: center;
@@ -77,11 +81,12 @@ const ContactContainer = styled.section`
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    border-top:3rem solid transparent;
   }
   .contact-title{
     grid-area: title;
-    margin-top: 1rem;
     border-bottom: .2rem solid var(--hover-color);
+    margin-top: 1rem;
   }
   .contact-back{
     grid-area: back;
@@ -154,6 +159,12 @@ const ContactContainer = styled.section`
     width: 10rem;
     height: 3rem;
   }
+  .message.color-green{
+    rgb(69, 189, 83);
+  }
+  .message.color-red{
+    color:rgb(189, 69, 69);
+  }
   
   
   @media screen and (min-width: 768px){
@@ -164,7 +175,7 @@ const ContactContainer = styled.section`
       gap: 1rem;
       padding: 0.5rem;
       overflow: hidden;
-  
+      // border-top:7rem solid transparent;
     }
     
     .contact-soial-icons{

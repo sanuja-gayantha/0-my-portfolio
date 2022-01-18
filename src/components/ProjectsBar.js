@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 // custom imports
 import Me2 from '../data/images/me2.jpg'
@@ -7,6 +8,7 @@ import {projectBarData} from '../data/data';
 
 
 const ProjectsBar = () => {
+  
     return(
         <ProjectsBarContainer>
             <section id="project-bar-section">
@@ -27,7 +29,7 @@ const ProjectsBar = () => {
                             })}
                     </div>
                     <div className="project-bar-button">
-                        <button className="btn">Explor more</button>
+                        <Link to='/updating' className="btn" >Explor more</Link>
                     </div>
                 </div>
             </section>
@@ -54,6 +56,7 @@ const ProjectsBarContainer = styled.section`
     justify-content: center;
     align-items: center;
     overflow:hidden;
+    border-top:3rem solid transparent;
   }
   .project-bar-title{
     grid-area: title;
@@ -140,6 +143,12 @@ const ProjectsBarContainer = styled.section`
     padding: 0.5rem;
   }
   
+  @media screen and (min-width: 768px){
+    .project-bar-center{
+      border-top:5rem solid transparent;
+    }
+ 
+  }
 `
 
 export default ProjectsBar;

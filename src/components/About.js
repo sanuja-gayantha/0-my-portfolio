@@ -47,6 +47,7 @@ const AboutContainer = styled.section`
     width: auto;
     justify-content: center;
     align-items: center;
+    border-top:3rem solid transparent;
   
   }
   .section-title{
@@ -101,6 +102,7 @@ const AboutContainer = styled.section`
       height: 100%;
       justify-content: center;
       align-items: center;
+      border-top:5rem solid transparent;
     
     }
     .about-description{

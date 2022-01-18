@@ -1,6 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react';
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 
 // custom imports
 import {links} from '../data/data';
@@ -26,7 +25,7 @@ const Navbar = () => {
       <nav>
         <div className='nav-center'>
           <div className='nav-header'>
-            <a href="#" className="nav-logo">Sanuja</a>
+            <a href="#hero-section" className="nav-logo">Sanuja</a>
             <button className='nav-toggle' onClick={() => setShowLinks(!showLinks)}>
               <FaBars />
             </button>           
@@ -138,7 +137,6 @@ const NavContainer = styled.nav`
   @media screen and (min-width: 767px){
     nav{
       border-radius: 0 0 0 0;
-      height:5rem;
     }
     .nav-header {
       padding: 0;
