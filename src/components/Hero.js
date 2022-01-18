@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Hero = () => {
     return (
         <HeroContainer>
-        <section className="hero-section">
+        <section id="hero-section">
             <div className="hero-center">
                 <div className="hero-info">
                     <h2 className="hero-intro">Hello from sanuja</h2>
@@ -21,9 +21,9 @@ const Hero = () => {
                     <div className="hero-description">
                         Experience in web application development and producing quality work.
                     </div>
-                    <button className="btn">
-                        contect me
-                    </button>
+                    <a href="#content-section">
+                      <button className="btn">contect me</button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -95,29 +95,6 @@ const HeroContainer = styled.section`
     margin:.5rem;
     
   }
-  
-  .btn {
-    text-transform: uppercase;
-    background: var(--hover-color);
-    color: var(--body-color);
-    padding: 1rem 1.5rem;
-    margin-top: 1rem;
-    letter-spacing: var(--spacing);
-    display: inline-block;
-    font-weight: 600;
-    transition: var(--transition);
-    font-size: 0.875rem;
-    cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    // border-radius: var(--radius);
-    border-color: transparent;
-    &:hover {
-    color: var(--title-color);
-    background: var(--first-color-light-medium);
-  }
-
-
-
 
 `
 

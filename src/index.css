@@ -119,7 +119,6 @@ main{
   /* border: 5px solid; */
 }
 section{
-  border: 2px solid red;
   min-height: calc(100vh - 3rem);
   width: 100%;
   margin: 0 auto;
@@ -131,12 +130,33 @@ section{
 }
 @media screen and (min-width: 767px){
   section{
-    border: 2px solid red;
-    min-height: calc(100vh - 5rem)
+    min-height: calc(100vh - 5rem);
+    /* max-width: var(--max-width); */
   } 
   .space{
     height: 5rem;
   }
+}
+
+.btn {
+  text-transform: uppercase;
+  background: var(--hover-color);
+  color: var(--body-color);
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 600;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  /* border-radius: var(--radius); */
+  border-color: transparent;
+}
+.btn:hover {
+  color: var(--title-color);
+  background: var(--first-color-light-medium);
 }
 
 /* Hero */
@@ -144,59 +164,3 @@ section{
   background:url(./data/images/wave.svg);
 }
 
-.contact-center {
-  display:grid;
-  grid-template-areas: 
-    "title"
-    "form"
-    "back";
-
-  grid-template-rows: 3rem auto 2rem;   
-  gap:1rem;
-  justify-items: center;
-  align-items: center;
-  /* margin: 0 1rem; */
-  height: 100%;
-  width: auto;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid;
-  overflow: hidden;
-}
-.contact-title{
-  grid-area: title;
-  margin-top: 1rem;
-  border-bottom: .2rem solid var(--hover-color);
-}
-.contact-form{
-  grid-area: form;
-  justify-content: center;
-  align-items: center;
-  /* display:flex; */
-  /* gap: 1rem; */
-  /* flex-direction: column; */
-  font-size: var(--normal-font-size);
-  padding: 0.5rem;
-  border:1px  solid;
-  width: 100vw;
-  height: 100%;
-
-}
-.contact-back{
-  grid-area: back;
-  background:var(--hover-color);
-  margin: 0;
-  display: flex;
-  border:1px  solid;
-  width: 100vw;
-  height: 100%;
-  font-size: var(--h4-font-size);
-  color: var(--body-color);
-  align-items: center;
-  justify-content: center;
-}
-
-
-@media screen and (min-width: 768px){
-  
-}

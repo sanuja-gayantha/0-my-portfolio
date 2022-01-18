@@ -5,21 +5,21 @@ import styled from 'styled-components';
 const About = () => {
     return(
         <AboutContainer>
-        <section className="about-section">
+        <section id="about-section">
             <div className="about-center">
                 <h2 className="section-title">about me</h2>
                 <img src={Me2} className="about-image" alt='image of me'></img>
                 <div className="about-description">
                     <ul className="about-info">
                         <li>
-                            I describe myself as a passionate developer who loves coding, and designing. Coding have been my passion since the days I started working with computers  ❤️.
+                            I describe myself as a self learning passionate developer who loves coding, and designing. Coding have been my passion since the days I started working with computers  ❤️.
                         </li>
                         <li>
-                            I'm interested in react.js ⚛️ and familiar with JavaScript, React.js, Python, C++, HTML5, CSS, Bootstrap, Redux, Node.js, SQL, PHP, CodeIgniter, .NET, Java, Ajax, JSON, etc.
+                            I'm interest in react.js ⚛️ and familiar with JavaScript, React.js, Python, C++, HTML5, CSS, Bootstrap, Redux, Node.js, SQL, PHP, CodeIgniter, .NET, Java, Ajax, JSON, etc.
                         </li>
                     </ul>
                 <div className="about-quoto">
-                    "Simple is the best"
+                  “Everything should be made as simple as possible, but no simpler”
                 </div>
                 </div>
             </div>
@@ -81,6 +81,7 @@ const AboutContainer = styled.section`
   
   .about-quoto{
     color: var(--hover-color);
+    font-style: italic;
   }
   
   @media screen and (min-width: 768px){

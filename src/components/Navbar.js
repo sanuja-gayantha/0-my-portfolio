@@ -38,10 +38,10 @@ const Navbar = () => {
                 const { id, url, text, icon } = link;
                 return (
                   <li key={id}>
-                      <Link className='link' to={url} onClick={() => setShowLinks(!showLinks)}>
+                      <a className='link' href={url} onClick={() => setShowLinks(!showLinks)}>
                         <div className="nav-icon">{icon}</div>
                         <div className="nav-title">{text}</div>
-                      </Link>
+                      </a>
                   </li>
                 );
               })}

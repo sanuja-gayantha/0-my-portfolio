@@ -9,13 +9,12 @@ import {projectBarData} from '../data/data';
 const ProjectsBar = () => {
     return(
         <ProjectsBarContainer>
-            <section className="project-bar-section">
+            <section id="project-bar-section">
                 <div className="project-bar-center">
                     <h2 className="project-bar-title">projects</h2>
                     <div className="project-bar-images">
                             {projectBarData.map((data) => {
                                 const {id, title, category, img, desc, app_url} = data;
-                                console.log(img)
                                 return (
                                     <div key={id} className='project-bar-card'>
                                         <img src={img} alt={title} />
@@ -79,7 +78,7 @@ const ProjectsBarContainer = styled.section`
     font-size: 3rem;
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
     height: 100%;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     transition: all 500ms;
     overflow: hidden;
@@ -88,6 +87,9 @@ const ProjectsBarContainer = styled.section`
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+  }
+  .project-bar-card img{
+    // width: 100%;
   }
   
   
@@ -119,6 +121,12 @@ const ProjectsBarContainer = styled.section`
   .project-bar-photo-info a{
     border: 1px solid;
     padding:0.5rem;
+    transition: var(--transition);
+  }
+  .project-bar-photo-info a:hover{
+    color: var(--title-color);
+    background-color: var(--body-color);
+    border-color: var(--body-color);
   }
   
   .project-bar-button{
@@ -132,28 +140,6 @@ const ProjectsBarContainer = styled.section`
     padding: 0.5rem;
   }
   
-  
-  .btn {
-    text-transform: uppercase;
-    background: var(--hover-color);
-    color: var(--body-color);
-    padding: 1rem 1.5rem;
-    margin-top: 1rem;
-    letter-spacing: var(--spacing);
-    display: inline-block;
-    font-weight: 600;
-    transition: var(--transition);
-    font-size: 0.875rem;
-    cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    // border-radius: var(--radius);
-    border-color: transparent;
-  }
-  .btn:hover {
-    color: var(--title-color);
-    background: var(--first-color-light-medium);
-  }
-
 `
 
 export default ProjectsBar;
