@@ -26,7 +26,7 @@ const Navbar = () => {
       <nav>
         <div className='nav-center'>
           <div className='nav-header'>
-            <HashLink to="/hero" className="nav-logo">Sanuja</HashLink>
+            <HashLink to="/" className="nav-logo">Sanuja</HashLink>
             <button className='nav-toggle' onClick={() => setShowLinks(!showLinks)}>
               <FaBars />
             </button>           

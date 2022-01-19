@@ -16,7 +16,7 @@ import Python from './images/python.jpg';
 export const links = [
   {
     id: 1,
-    url: '/hero',
+    url: '/',
     text: 'home',
     icon: <AiOutlineHome />,
   },

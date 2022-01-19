@@ -17,7 +17,7 @@ function App() {
     <Router>
       <Navbar />
       <Switch>
-        <Route exact path='/hero'>
+        <Route exact path='/'>
           <Hero />
         </Route>
         <Route exact path='/about'>
