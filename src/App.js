@@ -2,19 +2,32 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // custom imports
-import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Error from './components/Error';
 import Navbar from './components/Navbar';
 import Updating from './components/Updating';
+import Hero from './components/Hero';
+import About from './components/About';
+import ProjectsBar from './components/ProjectsBar';
+import Contact from './components/Contact';
+
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Switch>
-        <Route exact path='/'>
-          <Home />
+        <Route exact path='/hero'>
+          <Hero />
+        </Route>
+        <Route exact path='/about'>
+          <About />
+        </Route>
+        <Route exact path='/projectsbar'>
+          <ProjectsBar />
+        </Route>
+        <Route exact path='/contact'>
+          <Contact />
         </Route>
         <Route exact path='/projects'>
           <Projects />

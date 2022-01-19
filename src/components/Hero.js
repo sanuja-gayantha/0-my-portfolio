@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import {HashLink} from 'react-router-hash-link';
 
 const Hero = () => {
     return (
@@ -21,9 +21,9 @@ const Hero = () => {
                     <div className="hero-description">
                         Experience in web application development and producing quality work.
                     </div>
-                    <a href="#content-section">
+                    <HashLink to="/contact">
                       <button className="btn">contect me</button>
-                    </a>
+                    </HashLink>
                 </div>
             </div>
         </section>

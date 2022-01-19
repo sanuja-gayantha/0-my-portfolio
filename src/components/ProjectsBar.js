@@ -29,7 +29,7 @@ const ProjectsBar = () => {
                             })}
                     </div>
                     <div className="project-bar-button">
-                        <Link to='/updating' className="btn" >Explor more</Link>
+                        <Link to='/projects' className="btn" >Explor more</Link>
                     </div>
                 </div>
             </section>

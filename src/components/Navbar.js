@@ -1,5 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import styled from 'styled-components'
+import {HashLink} from 'react-router-hash-link';
 
 // custom imports
 import {links} from '../data/data';
@@ -25,7 +26,7 @@ const Navbar = () => {
       <nav>
         <div className='nav-center'>
           <div className='nav-header'>
-            <a href="#hero-section" className="nav-logo">Sanuja</a>
+            <HashLink to="/hero" className="nav-logo">Sanuja</HashLink>
             <button className='nav-toggle' onClick={() => setShowLinks(!showLinks)}>
               <FaBars />
             </button>           
@@ -37,10 +38,10 @@ const Navbar = () => {
                 const { id, url, text, icon } = link;
                 return (
                   <li key={id}>
-                      <a className='link' href={url} onClick={() => setShowLinks(!showLinks)}>
+                      <HashLink className='link' to={url} onClick={() => setShowLinks(!showLinks)}>
                         <div className="nav-icon">{icon}</div>
                         <div className="nav-title">{text}</div>
-                      </a>
+                      </HashLink>
                   </li>
                 );
               })}
