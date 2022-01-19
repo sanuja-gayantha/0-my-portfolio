@@ -4,24 +4,30 @@ import emailjs from '@emailjs/browser';
 
 // custom imports
 import { social } from '../data/data';
+import Alert from './Alert';
+import {useGlobalContext} from '../context'
 
 const Contact = () => {
 
-    const [message, setMessage] = useState('');
     const formRef = useRef(null);
+    const {refContactName, refContactSubject, refContactEmail, refContactMessage, alert, showAlert} = useGlobalContext();
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_yxrqmok', 'template_yhhuqvc', formRef.current, 'user_1e1EwwXdIiDGQUSvUNGbg')
-        .then((result) => {
-            console.log(result);
-            setMessage('Success');
-        }, (error) => {
-            console.log(error);
-            setMessage('Faield Try again');
-        });
-        
+        if (!refContactName.current.value && !refContactSubject.current.value && !refContactEmail.current.value && !refContactMessage.current.value) {
+          showAlert(true, 'danger', 'Please fill all fields.');
+
+        } else{
+          emailjs.sendForm('service_yxrqmok', 'template_yhhuqvc', formRef.current, 'user_1e1EwwXdIiDGQUSvUNGbg')
+          .then((result) => {
+              console.log(result);
+              showAlert(true, 'success', 'Email sent successfully.');
+          }, (error) => {
+              console.log(error);
+              showAlert(true, 'danger', 'Email sent faield try again.');
+          });
+        }
     }
 
     return(
@@ -44,12 +50,14 @@ const Contact = () => {
 
                     <div className="contact-form">
                         <form ref={formRef} onSubmit={handleSubmit}>
-                            <input type="text" placeholder='Name' name="user_name" />
-                            <input type="text" placeholder='Subject' name="user_subject" />
-                            <input type="text" placeholder='Email' name="user_email" />
-                            <textarea placeholder='Message' name="message" id="" rows="5"></textarea>
+                            <input type="text" placeholder='Name' name="user_name" ref={refContactName}/>
+                            <input type="text" placeholder='Subject' name="user_subject" ref={refContactSubject} />
+                            <input type="text" placeholder='Email' name="user_email"  ref={refContactEmail}/>
+                            <textarea placeholder='Message' name="message" id="" rows="5" ref={refContactMessage}></textarea>
                             <input className="btn" type="submit" value="Send" />
-                            <div>{message}</div>
+
+                            {/* load aleart */}
+                            <div>{alert.show && <Alert {...alert} removeAlert={showAlert} />}</div>
                         </form>
                     </div>
                 </div>
