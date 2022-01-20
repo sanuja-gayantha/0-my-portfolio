@@ -32,7 +32,8 @@ export const links = [
     url: '/projectsbar',
     text: 'projects',
     icon: <MdWeb />,
-  },
+  }
+  ,
   {
     id: 4,
     url: '/contact',

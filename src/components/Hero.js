@@ -22,9 +22,9 @@ const Hero = () => {
                         Experience in web application development and producing quality work.
                     </div>
                     {/* <HashLink to="/contact"> */}
-                    <a href="https://resume.io/r/UI6jKQHPQ">
+                    <a target="_blank" href="https://resume.io/r/UI6jKQHPQ">
                       <button className="btn">Check my resume</button>
-                    </a>               
+                    </a>   
                     {/* </HashLink> */}
                 </div>
             </div>
