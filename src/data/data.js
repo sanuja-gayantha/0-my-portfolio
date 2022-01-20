@@ -11,6 +11,7 @@ import photoApp from './images/photoApp.png';
 import GitHubUser from './images/git-hub-users.png';
 import HackerNews from './images/hacker-news.png';
 import Python from './images/python.jpg';
+import MyPortfolio from './images/my-portfolio.png';
 
 
 export const links = [
@@ -119,6 +120,15 @@ export const projectsData = [
   },
   {
     id: 4,
+    title: 'My portfolio website',
+    category: 'c',
+    img: MyPortfolio,
+    desc: `This is my portfolio website code. It is react based and fully mobile responsive.`,
+    app_url:'https://sanuja-portfolio.netlify.app/s',
+    external_link:''
+  },
+  {
+    id: 98,
     title: 'Excel to text converter softwere',
     category: 'c',
     img: Python,
@@ -128,7 +138,7 @@ export const projectsData = [
     external_link:''
   },
   {
-    id: 5,
+    id: 99,
     title: 'Share market index data scraper',
     category: 'c',
     img: Python,
@@ -139,7 +149,7 @@ export const projectsData = [
     external_link:''
   },
   {
-    id: 6,
+    id: 100,
     title: 'Crypto prices collector',
     category: 'c',
     img: Python,
