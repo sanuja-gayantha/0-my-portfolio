@@ -125,8 +125,8 @@ export const projectsData = [
     title: 'Feel music',
     category: 'c',
     img: FeelMusic,
-    desc: ``,
-    app_url:'',
+    desc: `under developing`,
+    app_url:'https://feel-music-by-sanuja.netlify.app',
     external_link:''
   },
   {
