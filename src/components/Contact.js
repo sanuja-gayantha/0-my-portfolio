@@ -89,7 +89,7 @@ const ContactContainer = styled.section`
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    border-top:3rem solid transparent;
+    border-top:4rem solid transparent;
   }
   .contact-title{
     grid-area: title;

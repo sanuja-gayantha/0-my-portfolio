@@ -1,5 +1,6 @@
-import React, {useContext, UseReducer, useRef, useState} from 'react';
-
+import React, {useContext, UseReducer, useRef, useState, useEffect} from 'react';
+import {links} from './data/data';
+import {Link} from 'react-router-dom';
 
 const AppContext = React.createContext()
 
@@ -14,6 +15,18 @@ const AppProvider = ({ children }) => {
   const showAlert = (show = false, type = '', msg = '') => {
     setAlert({ show, type, msg });
   };
+
+  // useEffect(() => {
+  //   const event = window.addEventListener('scroll', () => {
+  //     return(
+  //       <Link to='/about'></Link>
+  //     )
+          
+  //       })
+  //   return () => window.removeEventListener('scroll', event);
+  //   // eslint-disable-next-line
+  // }, [])
+
 
   return(
     <AppContext.Provider value={{refContactName, refContactSubject, refContactEmail, refContactMessage, alert, showAlert}}>

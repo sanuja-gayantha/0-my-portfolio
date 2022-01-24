@@ -102,7 +102,7 @@ const AboutContainer = styled.section`
       height: 100%;
       justify-content: center;
       align-items: center;
-      border-top:5rem solid transparent;
+      border-top:4rem solid transparent;
     
     }
     .about-description{
