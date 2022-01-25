@@ -124,8 +124,10 @@ const NavContainer = styled.nav`
       text-transform: capitalize;
       letter-spacing: var(--spacing);
       transition: var(--transition);
+      color: var(--first-color-light-medium);
       &:hover{
         color: var(--hover-color);
+        font-weight: 800;
       }
     }
 
@@ -172,8 +174,10 @@ const NavContainer = styled.nav`
         text-transform: capitalize;
         letter-spacing: var(--spacing);
         transition: var(--transition);
+        color: var(--first-color-light-medium);
         &:hover{
           color: var(--hover-color);
+          font-weight: 800;
         }
       }
     }
