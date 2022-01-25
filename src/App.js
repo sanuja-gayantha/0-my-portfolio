@@ -10,7 +10,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import ProjectsBar from './components/ProjectsBar';
 import Contact from './components/Contact';
-
+import Resume from './components/Resume';
 
 function App() {
   return (
@@ -31,6 +31,9 @@ function App() {
         </Route>
         <Route exact path='/projects'>
           <Projects />
+        </Route>
+        <Route exact path='/resume'>
+          <Resume />
         </Route>
         <Route exact path='/updating'>
           <Updating/>

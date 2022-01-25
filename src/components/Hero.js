@@ -15,17 +15,17 @@ const Hero = () => {
                             <div className="title-item">Web Designer</div>
                             <div className="title-item">UI/UX Designer</div>
                             <div className="title-item">Full-stack Developer</div>
-                            <div className="title-item">Mobile Developer</div>
+                            <div className="title-item">Programmer</div>
                         </div>
                     </div>
                     <div className="hero-description">
                         Experience in web application development and producing quality work.
                     </div>
-                    {/* <HashLink to="/contact"> */}
-                    <a target="_blank" href="https://resume.io/r/UI6jKQHPQ">
-                      <button className="btn">Check my resume</button>
-                    </a>   
-                    {/* </HashLink> */}
+                    <HashLink to="/contact">
+                    {/* <a target="_blank" href="https://resume.io/r/UI6jKQHPQ"> */}
+                      <button className="btn">Contact me</button>
+                    {/* </a>    */}
+                    </HashLink>
                 </div>
             </div>
         </section>

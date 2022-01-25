@@ -46,7 +46,8 @@ const ProjectsBarContainer = styled.section`
       "images"
       "button";
   
-    grid-template-rows: 3rem calc(90vh - 12rem) 6rem;   
+    grid-template-rows: 3rem auto 6rem;   
+    // grid-auto-rows: 230px;
     gap:1rem;
     justify-items: center;
     align-items: center;
@@ -71,6 +72,7 @@ const ProjectsBarContainer = styled.section`
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-auto-rows: 230px;
   }
   
   .project-bar-card {
@@ -145,7 +147,11 @@ const ProjectsBarContainer = styled.section`
   
   @media screen and (min-width: 768px){
     .project-bar-center{
+      grid-template-rows: 3rem calc(90vh - 12rem) 6rem;  
       border-top:5rem solid transparent;
+    }
+    .project-bar-images{
+      grid-auto-rows: 100%;
     }
  
   }

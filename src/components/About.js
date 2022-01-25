@@ -15,7 +15,7 @@ const About = () => {
                             I describe myself as a self learning passionate developer who loves coding, and designing. Coding have been my passion since the days I started working with computers  ❤️.
                         </li>
                         <li>
-                            I'm interest in react.js ⚛️ and familiar with JavaScript, React.js, Python, C++, HTML5, CSS, Bootstrap, Redux, Node.js, SQL, PHP, CodeIgniter, .NET, Java, Ajax, JSON, etc.
+                            I'm interest in react.js ⚛️ and familiar with JavaScript, React.js, Python, C++, HTML5, CSS, SASS, Bootstrap, Redux, Node.js, TypeScript, SQL, PHP, .NET, JSON, etc.
                         </li>
                     </ul>
                 <div className="about-quoto">

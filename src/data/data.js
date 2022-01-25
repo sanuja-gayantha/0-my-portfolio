@@ -37,12 +37,18 @@ export const links = [
   ,
   {
     id: 4,
+    url: '/resume',
+    text: 'my resume',
+    icon: <CgFileDocument />,
+  },
+  {
+    id: 5,
     url: '/contact',
     text: 'contact me',
     icon: <FiMail />,
   },
 ];
-
+// https://www.canva.com/design/DAE2dLh1gHs/qKZsxUddi7PGNGuhSAhiug/view?utm_content=DAE2dLh1gHs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
 export const social = [
     {
         id: 1,
