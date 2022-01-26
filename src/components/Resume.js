@@ -32,9 +32,9 @@ const ResumeContainer = styled.section`
   gap:1rem;
   justify-items: center;
   align-items: center;
-  margin: 0 1rem;
+  margin: 0 auto;
   height: 100%;
-  width: 95%;
+  width: 100%;
   justify-content: center;
   align-items: center;
   border-top:3rem solid transparent;
@@ -63,7 +63,7 @@ const ResumeContainer = styled.section`
 
 @media screen and (min-width: 768px){
   .resume-center {
-    margin: 0 2rem;
+    margin: 0 auto;
     padding: 0 2rem;
     border-top:5rem solid transparent;
     width: 90%;
