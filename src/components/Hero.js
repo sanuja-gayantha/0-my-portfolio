@@ -92,10 +92,11 @@ const HeroContainer = styled.section`
     }
   }
   .hero-description{
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    // display:flex;
+    // align-items:center;
+    // justify-content:center;
     margin:.5rem;
+    text-align:center;
     
   }
 
