@@ -137,7 +137,7 @@ const NavContainer = styled.nav`
   }
 
   
-  @media screen and (min-width: 767px){
+  @media screen and (min-width: 768px){
     nav{
       border-radius: 0 0 0 0;
     }
