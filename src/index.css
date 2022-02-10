@@ -125,7 +125,6 @@ section{
 @media screen and (min-width: 768px){
   section{
     min-height: calc(100vh);
-    /* max-width: var(--max-width); */
   } 
 }
 
