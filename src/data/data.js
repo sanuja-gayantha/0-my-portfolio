@@ -35,12 +35,12 @@ export const links = [
     icon: <MdWeb />,
   }
   ,
-  {
-    id: 4,
-    url: '/resume',
-    text: 'my resume',
-    icon: <CgFileDocument />,
-  },
+  // {
+  //   id: 4,
+  //   url: '/resume',
+  //   text: 'my resume',
+  //   icon: <CgFileDocument />,
+  // },
   {
     id: 5,
     url: '/contact',

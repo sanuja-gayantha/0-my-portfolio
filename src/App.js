@@ -32,9 +32,9 @@ function App() {
         <Route exact path='/projects'>
           <Projects />
         </Route>
-        <Route exact path='/resume'>
+        {/* <Route exact path='/resume'>
           <Resume />
-        </Route>
+        </Route> */}
         <Route exact path='/updating'>
           <Updating/>
         </Route>
